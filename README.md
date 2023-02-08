@@ -65,7 +65,7 @@ values (001,"sam","lora",27,"M","2022-1-18","Boston",70000),
 (0039,"mariam","jones",32,"F","2022-8-12","Virginia",56000),
 (0040,"mariam","roy",31,"F","2022-8-19","Virginia",79000);
 
-# Checke emp_details useing select Qurey in mysql 
+# Checke emp_details using select Qurey in mysql 
 
 select * from emp_details;
 
@@ -104,6 +104,8 @@ where salary=>30000 AND salary<=90000;
 where age=>21 AND age<=37 AND city = "Houston";
 where age=>21 AND age<=37 AND city = "Houston" AND sex = 'M';
 where salary=>30000 AND salary<=90000 AND sex = 'F';
+
+
 
 
 
