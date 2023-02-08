@@ -97,11 +97,15 @@ select * from emp_details where first_name in ('indian','sam','lara');
 select * from emp_details where first_name not in ('indian','sam','lara');
 select * from emp_details where city not in ('Austin','Boston');
 
-# MySQL And Operator Commands
+# MySQL And & OR Operator Commands
 
 where age=>21 AND age<=37;
 where salary=>30000 AND salary<=90000;
 where age=>21 AND age<=37 AND city = "Houston";
+where age=>21 AND age<=37 AND city = "Houston" AND sex = 'M';
+where salary=>30000 AND salary<=90000 AND sex = 'F';
+
+
 
 
 
