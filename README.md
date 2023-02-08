@@ -75,10 +75,12 @@ select distinct city from emp_details;
 
 # MySQL Select Query with Where Clause
 
-select * from employees where first_name ='david','dev';
-select * from employees where first_name = 'david' AND sex = 'M';
-select * from employees where first_name = 'marian' AND sex = 'F';
-select * from employees where first_name = 'dev' or first_name = 'mariam';
+select * from emp_details where first_name ='david','dev';
+select * from emp_details where first_name = 'david' AND sex = 'M';
+select * from emp_details where first_name = 'marian' AND sex = 'F';
+select * from emp_details where first_name = 'dev' or first_name = 'mariam';
+select * from emp_details where age>30;
+
 
 
 
