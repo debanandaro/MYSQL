@@ -39,17 +39,17 @@ values (001,"sam","lora",27,"M","2022-1-18","Boston",70000),
 (0013,"manu","Lucas",32,"M","2022-2-17","Houston",90000),
 (0014,"steven","Wood",33,"M","2022-2-17","Houston",98000),
 (0015,"Monica","roy",33,"F",2022-3-10","Arizona",87000),
-(0016,"Monica","lora",35,"F",2022-3-10","Arizona",82000),
-(0017,"steve","smith",31,"M",2022-3-10","California",62000),
-(0018,"shane","smith",39,"M",2022-3-17","California",100000),
-(0019,"Alex","wood",33,"F",2022-3-20","Texas",89000),
+(0016,"Monica","lora",35,"F","2022-3-10","Arizona",82000),
+(0017,"steve","smith",31,"M","2022-3-10","California",62000),
+(0018,"shane","smith",39,"M","2022-3-17","California",100000),
+(0019,"Alex","wood",33,"F","2022-3-20","Texas",89000),
 (0020,"dwayne","simth",36,"M","2022-4-12","San Francisco",87000),
 (0021,"dwayne","wood",31,"M","2022-4-15","San Francisco",55000),
 (0022,"dev","wood",23,"M","2022-4-18","Arizona",64000),
 (0023,"michel","jordan",27,"M","2022-4-20","Austin",52000),
 (0024,"michel","ray",24,"M","2022-4-22","Austin",30000),
 (0025,"mike","wood",26,"M","2022-4-23","North Carolina",44000),
-(0026,"lara","jones",34,"F",2022-4-23","North Carolina",43000),
+(0026,"lara","jones",34,"F","2022-4-23","North Carolina",43000),
 (0027,"june","wood",29,"F","2022-4-30","Boston",47000),
 (0028,"may","roy",30,"F","2022-5-1","North Carolina",53000),
 (0029,"marry","lara",26,"F","2022-5-1","Georgia",35000),
@@ -119,13 +119,13 @@ select * from emp_details where id not Between '002' AND '0010';
 select first_name from id where salary is not null;
 
 # Using other comparison operators solution 
-select * from emp_details where hire_date > = '2022-5-1' AND sex = 'F';
+select * from emp_details where doj_date > = '2022-5-1' AND sex = 'F';
 select * from emp_details where first_name > = 'marry' AND salary = '35000';
 select * from salary where salary >55000;
 
 # Using select Distin Solution
 
-select distin  hire_date from emp_details;
+select distin  doj_date from emp_details;
 
 # count ()
 select count(name) from emp_details;
@@ -133,7 +133,35 @@ select count(name) as count_name from emp_details;
 select sum(salary) from emp_details;
 select avg(salary) from emp_details;
 select count(column_name) from table_name;
-#
+# getting to know Aggregate function solution 
+select count (*) from salary where salary>=100000;
+select count(*) from emp_id;
+
+# Using Order by - Solution 
+select * from emp_details ORDER BY doj_date DESC;
+
+# Group by 
+select first_name from emp_details group by first_name;
+select count(first_name) from emp_details group by first_name;
+select first_name, count(first_name) as name_count from emp_details group by first_name order by first name;
+
+# using ali as (AS) solution 
+select salary, count (emp_id) as emp_with_sum_salary from salary where salary>80000 group by salary , order by salary;
+
+# Using HAVING 
+select * from emp_details HAVING doj_date > = '2022-4-30';
+select first_name, count(first_name) as name_count from emp_details GROUP BY first_name HAVING count (first_name)>15 ORDER by first_name;
+select * avg(salary) from salary group by emp_id Having avg (salary) > 120000;
+select emp_id, avg(salary) from salary group by emp_id
+# count() - an aggregate function - HAVING #
+
+
+
+
+
+
+
+
 
 
 
