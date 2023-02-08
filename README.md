@@ -106,6 +106,36 @@ where age=>21 AND age<=37 AND city = "Houston" AND sex = 'M';
 where salary=>30000 AND salary<=90000 AND sex = 'F';
 
 
+# Using LIKE-NOT-LIKE- Solution
+select * from where first_name like ('mark');
+select * from emp_details where hire_date like ('2022-2-10');
+select * from emp_details where id like ('0022');
+
+# Using Between and NOT Operators  Solution 
+select * from salary where salary Between 35000 AND 70000;
+select * from emp_details where id not Between '002' AND '0010';
+
+# Using is NOT NULL - IS NULL Solution 
+select first_name from id where salary is not null;
+
+# Using other comparison operators solution 
+select * from emp_details where hire_date > = '2022-5-1' AND sex = 'F';
+select * from emp_details where first_name > = 'marry' AND salary = '35000';
+select * from salary where salary >55000;
+
+# Using select Distin Solution
+
+select distin  hire_date from emp_details;
+
+# count ()
+
+
+
+
+
+
+
+
 
 
 
