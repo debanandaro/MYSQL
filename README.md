@@ -128,6 +128,12 @@ select * from salary where salary >55000;
 select distin  hire_date from emp_details;
 
 # count ()
+select count(name) from emp_details;
+select count(name) as count_name from emp_details;
+select sum(salary) from emp_details;
+select avg(salary) from emp_details;
+select count(column_name) from table_name;
+#
 
 
 
