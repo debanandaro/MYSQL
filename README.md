@@ -157,6 +157,7 @@ select emp_id, avg(salary) from salary group by emp_id HAVING avg (salary) > 120
 # count() - an aggregate function - HAVING #
 
 # using where and having 
+select emp_id from 
 
 
 
