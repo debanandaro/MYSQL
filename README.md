@@ -4,8 +4,8 @@
 
 # Create a table in  MYSQL 
 
-create a database employess
-use database employess;
+create a database employees
+use database employees;
 
 create a table emp_detalis (
 id int unsigned,
@@ -51,15 +51,35 @@ values (001,"sam","lora",27,"M","2022-1-18","Boston",70000),
 (0025,"mike","wood",26,"M","2022-4-23","North Carolina",44000),
 (0026,"lara","jones",34,"F",2022-4-23","North Carolina",43000),
 (0027,"june","wood",29,"F","2022-4-30","Boston",47000),
-(0028,"may","roy",30,"2022-5-1","North Carolina",53000),
-(0029,"marry","lara",26,"2022-5-1","Georgia",35000),
-(0030,"lara","lara",38,"2022-5-5","Georgia",120000),
-(0031,"hary","jones",40,"2022-5-11","Georgia",130000),
-(0032,"smith","lucas",41,"2022-5-11","Georgia",130000),
-(0033,"david","simth",45,"2022-6-17","Florida",180000),
-(0034,"david","wood",40,"2022-6-21","Florida",110000),
-(0035,"shone","wehner",38,"2022-7-14","Florida",100000),
-(0036,"
+(0028,"may","roy",30,"F","2022-5-1","North Carolina",53000),
+(0029,"marry","lara",26,"F","2022-5-1","Georgia",35000),
+(0030,"lara","lara",38,"F","2022-5-5","Georgia",120000),
+(0031,"harry","jones",40,"M","2022-5-11","Georgia",130000),
+(0032,"smith","lucas",41,"M","2022-5-11","Georgia",130000),
+(0033,"david","simth",45,"M","2022-6-17","Florida",180000),
+(0034,"david","wood",40,"M","2022-6-21","Florida",110000),
+(0035,"shone","wehner",38,"M","2022-7-14","Florida",100000),
+(0036,"steve","smith",36,"M","2022-7-14","Colorado",75800),
+(0037,"indian","jones",31,"M","2022-7-19","Colorado",88000),
+(0038,"mark","wood",45,"M","2022-8-12","Colorado",170000),
+(0039,"mariam","jones",32,"F","2022-8-12","Virginia",56000),
+(0040,"mariam","roy",31,"F","2022-8-19","Virginia",79000);
+
+# Checke emp_details useing select Qurey in mysql 
+
+select * from emp_details;
+
+select distinct city from emp_details;
+
+
+
+# MySQL Select Query with Where Clause
+
+select * from employees where first_name ='david','dev';
+select * from employees where first_name = 'david' AND sex = 'M';
+select * from employees where first_name = 'marian' AND sex = 'F';
+select * from employees where first_name = 'dev' or first_name = 'mariam';
+
 
 
 
