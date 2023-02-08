@@ -80,6 +80,8 @@ select * from emp_details where first_name = 'david' AND sex = 'M';
 select * from emp_details where first_name = 'marian' AND sex = 'F';
 select * from emp_details where first_name = 'dev' or first_name = 'mariam';
 select * from emp_details where age>30;
+select first_name,sex,city from emp_details where sex = 'F';
+select * from emp_details where city = 'California' or city = 'Colorado';
 
 
 
