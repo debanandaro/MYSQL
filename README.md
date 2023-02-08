@@ -86,6 +86,14 @@ select first_name,sex,city from emp_details where sex = 'F';
 select * from emp_details where city = 'California' or city = 'Colorado';
 select * from emp_details where city = ('California','Colorado');
 
+# Operation precedence and logical order-solution 
+
+select * from emp_details where sex ='M' AND (first_name = 'sam' or first_name ='indian');
+select * from emp_details where first_name = 'indian'or'sam'or'lara';
+select 8 from emp_details where first_name in ('indian','sam','lara');
+
+
+
 
 
 
