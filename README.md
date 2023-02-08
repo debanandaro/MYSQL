@@ -86,13 +86,13 @@ select first_name,sex,city from emp_details where sex = 'F';
 select * from emp_details where city = 'California' or city = 'Colorado';
 select * from emp_details where city = ('California','Colorado');
 
-# Operation precedence and logical order-solution 
+# Operation precedence and logical order  
 
 select * from emp_details where sex ='M' AND (first_name = 'sam' or first_name ='indian');
 select * from emp_details where first_name = 'indian'or'sam'or'lara';
 select * from emp_details where first_name in ('indian','sam','lara');
 
-# Using in NOT IN Solution 
+# Using in NOT IN 
 
 select * from emp_details where first_name not in ('indian','sam','lara');
 select * from emp_details where city not in ('Austin','Boston');
@@ -106,7 +106,7 @@ where age=>21 AND age<=37 AND city = "Houston" AND sex = 'M';
 where salary=>30000 AND salary<=90000 AND sex = 'F';
 
 
-# Using LIKE-NOT-LIKE- Solution
+# Using LIKE-NOT-LIKE-
 select * from where first_name like ('mark');
 select * from emp_details where hire_date like ('2022-2-10');
 select * from emp_details where id like ('0022');
@@ -115,15 +115,15 @@ select * from emp_details where id like ('0022');
 select * from salary where salary Between 35000 AND 70000;
 select * from emp_details where id not Between '002' AND '0010';
 
-# Using is NOT NULL - IS NULL Solution 
+# Using is NOT NULL - IS NULL 
 select first_name from id where salary is not null;
 
-# Using other comparison operators solution 
+# Using other comparison operators 
 select * from emp_details where doj_date > = '2022-5-1' AND sex = 'F';
 select * from emp_details where first_name > = 'marry' AND salary = '35000';
 select * from salary where salary >55000;
 
-# Using select Distin Solution
+# Using select Distin 
 
 select distin  doj_date from emp_details;
 
@@ -137,7 +137,7 @@ select count(column_name) from table_name;
 select count (*) from salary where salary>=100000;
 select count(*) from emp_id;
 
-# Using Order by - Solution 
+# Using Order by 
 select * from emp_details ORDER BY doj_date DESC;
 
 # Group by 
@@ -145,15 +145,18 @@ select first_name from emp_details group by first_name;
 select count(first_name) from emp_details group by first_name;
 select first_name, count(first_name) as name_count from emp_details group by first_name order by first name;
 
-# using ali as (AS) solution 
+# using ali as (AS) 
 select salary, count (emp_id) as emp_with_sum_salary from salary where salary>80000 group by salary , order by salary;
 
 # Using HAVING 
 select * from emp_details HAVING doj_date > = '2022-4-30';
 select first_name, count(first_name) as name_count from emp_details GROUP BY first_name HAVING count (first_name)>15 ORDER by first_name;
 select * avg(salary) from salary group by emp_id Having avg (salary) > 120000;
-select emp_id, avg(salary) from salary group by emp_id
+select emp_id, avg(salary) from salary group by emp_id HAVING avg (salary) > 120000 order by emp_id;
+
 # count() - an aggregate function - HAVING #
+
+# using where and having 
 
 
 
