@@ -157,7 +157,68 @@ select emp_id, avg(salary) from salary group by emp_id HAVING avg (salary) > 120
 # count() - an aggregate function - HAVING #
 
 # using where and having 
-select emp_id from 
+select emp_id from first_name where from_date > '2022-3-20' Group by emp_details having count (from_date)> 1 order by emp_id;
+
+# Using limit 
+select * from emp_details limit 20;
+
+# Join 
+** creat and fill in the 'department_dup' table using the following code drop table if exists deparments_dept;** 
+creat table deparment_dept
+(
+dept_no char(4) null,
+dept_name varchar (40) null
+);
+
+insert into deparment_details(
+dept_no
+dept_name
+);
+
+select * from deparments;
+
+insert into deparment_details(dept_name)
+
+values ('public relation');
+
+delete from deparments_details
+where 
+  dept_no = 'd002';
+  
+ insert into deparments_dup(dept_no)
+  values ('dolo'),('doll');
+  
+  insert into dept_manage_dup
+  
+  select * from dept_manage;
+  
+  insert into dept_manager_dup (emp_id, fromdate )
+ values (005,'2017-01-01'),
+ (006,'2017-01-01')
+ (007,'2017-01-01');
+ 
+ Delete from dept_manager_dup
+ where 
+     dept_no = 'dooi';
+# inner join 
+
+select table_1.column_name(s), table_2. column_name(s) from table_1 join table_2 on table_1. column_name = table_2. column_name;
+# the functionnality of left join 
+ select
+ e.emp_no,
+ e.first_name,
+ e.last_name,
+ dm.dept_no,
+ dm.from_date,
+ from employees 
+ left join
+ dept_manager dm on e.emp_no = dm.emp-no
+ where
+ e.last_name = 'ray'
+ order by dm.dept_no DESC, e.emp_no;
+ 
+  
+
 
 
 
