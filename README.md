@@ -467,6 +467,78 @@ column_name;
  e.first_name,
  e.last_name,
  e.doj_date,
+ t.title,
+ m.from_date,
+ d.dept_name
+ from employees 
+ join
+ dept_manager m on e.emp_no = m.emp_id
+ join
+ deparments d on m.dept_on = d.dept_id
+ join 
+ tittle t on e.emp_no = t.emp_id 
+ where
+ t.title = 'manager'
+ Order by
+ e.emp_no;
+ 
+ select
+ e.first_name,
+ e.last_name,
+ e.doj_date,
+ t.title,
+ m.from_date,
+ d.dept_name
+ from employees 
+ join
+ dept_manager m on e.emp_no = m.emp_id
+ join
+ deparments d on m.dept_on = d.dept_id
+ join 
+ tittle t on e.emp_no = t.emp_id 
+ AND
+ m from_date = t.from_date
+ Order by 
+ e.emp_no;
+ 
+ # Between Union and Unionall
+ 
+ select *
+ from
+ (select 
+ e.emp_no,
+ e.first_name,
+ e.last_name,
+ NULL AS dept_no,
+ NULL AS from_date
+ from
+ employees e 
+ where 
+ last_name = 'waston' union 
+ NULL AS emp_id
+ null as first_name,
+ null as last_name,
+ dm.dept_no,
+ dm.from_date
+ from 
+ dept_manager dm) as a 
+ order by
+ e.emp_id DESC;
+ 
+ # Mysql subqueries with in embeded inside
+ 
+ select *
+ from 
+ dept_manger
+ where
+ emp_no in (select
+ emp_id 
+ from employees 
+ where
+ doj_date 
+ between '2022-1-18' AND '2022-6-17');
+ 
+ 
  
  
   
