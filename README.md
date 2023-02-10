@@ -67,97 +67,295 @@ values (001,"sam","lora",27,"M","2022-1-18","Boston",70000),
 
 # Checke emp_details using select Qurey in mysql 
 
-select * from emp_details;
+select * from
+emp_details;
 
-select distinct city from emp_details;
+select distinct city from 
+emp_details;
 
 
 
 # MySQL Select Query with Where Clause
 
-select * from emp_details where first_name ='david','dev';
-select * from emp_details where first_name = 'david' AND sex = 'M';
-select * from emp_details where first_name = 'marian' AND sex = 'F';
-select * from emp_details where first_name = 'dev' or first_name = 'mariam';
-select * from emp_details where age > 30;
-select * from emp_details where age < 25;
-select * from emp_details where age > 30 AND sex = 'M';
-select first_name,sex,city from emp_details where sex = 'F';
-select * from emp_details where city = 'California' or city = 'Colorado';
-select * from emp_details where city = ('California','Colorado');
+select * from
+emp_details
+where 
+first_name ='david','dev';
+
+select * from 
+emp_details
+where
+first_name = 'david' AND sex = 'M';
+
+select * from
+where
+first_name = 'marian' AND sex = 'F';
+
+select * from 
+emp_details
+where 
+first_name = 'dev' or first_name = 'mariam';
+
+select * from 
+emp_details 
+where 
+age > 30;
+
+select * from
+emp_details
+where 
+age < 25;
+
+select * from 
+emp_details
+where
+age > 30 AND sex = 'M';
+
+select 
+first_name,
+sex,
+city from
+emp_details
+where sex = 'F';
+
+select * from
+emp_details
+where
+city = 'California' or city = 'Colorado';
+
+select * from
+emp_details
+where city = ('California','Colorado');
 
 # Operation precedence and logical order  
 
-select * from emp_details where sex ='M' AND (first_name = 'sam' or first_name ='indian');
-select * from emp_details where first_name = 'indian'or'sam'or'lara';
-select * from emp_details where first_name in ('indian','sam','lara');
+select * from
+emp_details 
+where 
+sex ='M'
+AND 
+(first_name = 'sam' or first_name ='indian');
+
+select * from
+emp_details
+where 
+first_name = 'indian'or'sam'or'lara';
+
+select * from 
+emp_details
+where
+first_name in ('indian','sam','lara');
 
 # Using in NOT IN 
 
-select * from emp_details where first_name not in ('indian','sam','lara');
-select * from emp_details where city not in ('Austin','Boston');
+select * from
+emp_details
+where
+first_name not in ('indian','sam','lara
+
+select * from
+emp_details
+where city not in ('Austin','Boston');
 
 # MySQL And  Operator Commands
 
-where age=>21 AND age<=37;
-where salary=>30000 AND salary<=90000;
-where age=>21 AND age<=37 AND city = "Houston";
-where age=>21 AND age<=37 AND city = "Houston" AND sex = 'M';
-where salary=>30000 AND salary<=90000 AND sex = 'F';
+where age=>21
+AND 
+age<=37;
+
+where salary=>30000
+AND 
+salary<=90000;
+
+where age=>21
+AND 
+age<=37
+AND 
+city = "Houston";
+
+where age=>21
+AND 
+age<=37
+AND
+city = "Houston" AND sex = 'M';
+
+where salary=>30000
+AND 
+salary<=90000 AND sex = 'F';
 
 
 # Using LIKE-NOT-LIKE-
-select * from where first_name like ('mark');
-select * from emp_details where hire_date like ('2022-2-10');
-select * from emp_details where id like ('0022');
+select * from
+where
+first_name like ('mark');
+
+select * from
+emp_details
+where
+hire_date like ('2022-2-10');
+
+select * from
+emp_details 
+where id like ('0022');
 
 # Using Between and NOT Operators  Solution 
-select * from salary where salary Between 35000 AND 70000;
-select * from emp_details where id not Between '002' AND '0010';
+select * from 
+salary where 
+salary Between 35000 AND 70000;
+
+select * from
+emp_details 
+where id not Between '002' AND '0010';
 
 # Using is NOT NULL - IS NULL 
-select first_name from id where salary is not null;
+select first_name 
+from
+id where salary is not null;
 
 # Using other comparison operators 
-select * from emp_details where doj_date > = '2022-5-1' AND sex = 'F';
-select * from emp_details where first_name > = 'marry' AND salary = '35000';
-select * from salary where salary >55000;
+select * from
+emp_details
+where 
+doj_date > = '2022-5-1'
+AND sex = 'F';
+
+select * from 
+emp_details
+where
+first_name > = 'marry'
+AND salary = '35000';
+
+select * from 
+salary where 
+salary >55000;
 
 # Using select Distin 
 
-select distin  doj_date from emp_details;
+select distin 
+doj_date 
+from 
+emp_details;
 
 # count ()
-select count(name) from emp_details;
-select count(name) as count_name from emp_details;
-select sum(salary) from emp_details;
-select avg(salary) from emp_details;
-select count(column_name) from table_name;
+select 
+count(name) 
+from emp_details;
+
+select
+count(name) 
+as
+count_name
+from 
+emp_details;
+
+select
+sum(salary) 
+from
+emp_details;
+
+select
+avg(salary)
+from
+emp_details;
+
+select
+count(column_name)
+from
+table_name;
+
 # getting to know Aggregate function solution 
-select count (*) from salary where salary>=100000;
-select count(*) from emp_id;
+
+select 
+count (*)
+from 
+salary 
+where 
+salary>=100000;
+
+select
+count(*)
+from
+emp_id;
 
 # Using Order by 
-select * from emp_details ORDER BY doj_date DESC;
+select * 
+from 
+emp_details 
+ORDER BY 
+doj_date DESC;
 
 # Group by 
-select first_name from emp_details group by first_name;
-select count(first_name) from emp_details group by first_name;
-select first_name, count(first_name) as name_count from emp_details group by first_name order by first name;
+select 
+first_name
+from 
+emp_details
+group by 
+first_name;
+
+select 
+count(first_name)
+from
+emp_details
+group by 
+first_name;
+
+select
+first_name, 
+count(first_name)
+as name_count from
+emp_details
+group by 
+first_name order by first name;
 
 # using ali as (AS) 
-select salary, count (emp_id) as emp_with_sum_salary from salary where salary>80000 group by salary , order by salary;
+select salary, 
+count (emp_id)
+as emp_with_sum_salary
+from salary
+where 
+salary>80000
+group by salary ,
+order by salary;
 
 # Using HAVING 
-select * from emp_details HAVING doj_date > = '2022-4-30';
+select * from 
+emp_details 
+HAVING 
+doj_date > = '2022-4-30';
+
 select first_name, count(first_name) as name_count from emp_details GROUP BY first_name HAVING count (first_name)>15 ORDER by first_name;
-select * avg(salary) from salary group by emp_id Having avg (salary) > 120000;
-select emp_id, avg(salary) from salary group by emp_id HAVING avg (salary) > 120000 order by emp_id;
+
+select * 
+avg(salary)
+from 
+salary group by 
+emp_id
+Having
+avg (salary) > 120000;
+
+select
+emp_id,
+avg(salary)
+from salary
+group by
+emp_id
+HAVING
+avg (salary) > 120000
+order by emp_id;
 
 # count() - an aggregate function - HAVING #
 
 # using where and having 
-select emp_id from first_name where from_date > '2022-3-20' Group by emp_details having count (from_date)> 1 order by emp_id;
+select
+emp_id
+from 
+first_name
+where 
+from_date > '2022-3-20' 
+Group by
+emp_details
+having count (from_date)> 1
+order by emp_id;
 
 # Using limit 
 select * from emp_details limit 20;
@@ -202,7 +400,16 @@ where
      dept_no = 'dooi';
 # inner join 
 
-select table_1.column_name(s), table_2. column_name(s) from table_1 join table_2 on table_1. column_name = table_2. column_name;
+select
+table_1.column_name(s),
+table_2. column_name(s)
+from 
+table_1
+join table_2
+on table_1.
+column_name = table_2.
+column_name;
+
 # the functionnality of left join 
  select
  e.emp_no,
@@ -216,6 +423,51 @@ select table_1.column_name(s), table_2. column_name(s) from table_1 join table_2
  where
  e.last_name = 'ray'
  order by dm.dept_no DESC, e.emp_no;
+ 
+ # Diffrent betweens the new and the old join sytax 
+ ** extract a list containing information about all managers amployees number,first nd last name deoarments number and doj date use the old type of join syntax to obtain ,
+ select
+ e.emp_id,
+ e.first_name,
+ e.last_name,
+ dm.dept_no,
+ dm.doj_date
+ from employees ,
+ dept_manager dm 
+ where e.emp_no = dm.emp_id;
+ 
+ # Using join and where together 
+ 
+ select 
+ e.first_name,
+ e.last_name,
+ e.doj_date,
+ t.title
+ from employees e 
+ join title t on e.emp_id = t.emp_no
+ where 
+ first_name = "sam"
+ AND last_name = "ray"
+ Order by e.emp_id
+ ;
+ 
+ # the functionality of cross join 
+ 
+ select 
+ dm *d* 
+ from 
+ deparments d
+ where 
+ d.dept_no = 'doo3'
+ order by d.dept_name;
+ 
+ # join more than two table 
+ 
+ select
+ e.first_name,
+ e.last_name,
+ e.doj_date,
+ 
  
   
 
